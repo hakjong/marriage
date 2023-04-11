@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>손학종 & 김나영의 모바일 청첩장입니다.</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-gothic.css" rel="stylesheet">
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/maru-buri.css" rel="stylesheet">    
+
+
+	<script type='text/javascript' src='unitegallery/js/jquery-11.0.min.js'></script>	
+	
+	<script type='text/javascript' src='unitegallery/js/ug-common-libraries.js'></script>	
+	<script type='text/javascript' src='unitegallery/js/ug-functions.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-thumbsgeneral.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-thumbsstrip.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-touchthumbs.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-panelsbase.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-strippanel.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-gridpanel.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-thumbsgrid.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-tiles.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-tiledesign.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-avia.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-slider.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-sliderassets.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-touchslider.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-zoomslider.js'></script>	
+	<script type='text/javascript' src='unitegallery/js/ug-video.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-gallery.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-lightbox.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-carousel.js'></script>
+	<script type='text/javascript' src='unitegallery/js/ug-api.js'></script>
+
+	<link rel='stylesheet' href='unitegallery/css/unite-gallery.css' type='text/css' />
+	
+	<script type='text/javascript' src='unitegallery/themes/tiles/ug-theme-tiles.js'></script>
+    
+	<link rel='stylesheet' 		  href='unitegallery/themes/default/ug-theme-default.css' type='text/css' />
+
+	
+
+  </head>
+  <body>
+    <div class="wrap">
+        <div id="main">
+
+            <img id="main-img" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/main.jpg" class="img-fluid" alt="메인">
+
+            <p id="main-invite" class="text-center">초대합니다.</p>
+            <p id="main-name" class="text-center">손학종 | 김나영</p>
+
+            <p id="main-datetime" class="text-center">2023년 5월 20일. 토요일 오후 1시</p>
+            <p id="main-location" class="text-center">분당앤스퀘어 4층 컨벤션홀</p>
+        </div>
+
+        <!-- <div class="div-line"></div> -->
+        
+        <div id="message">
+            <div class="text-center" id="message-text">
+                <img src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/c.png">
+                <p>같은 곳을 출발해</p>
+                <p>각자의 길을 걸어온 두 사람이</p>
+                <p>이제 손잡고 함께 나아가려 합니다.</p>
+                <p>오셔서 새 출발의 자리를 빛내어 주십시오.</p>
+                <p class="newline"></p>
+                <p>손관철 김희순의 장남 <span class="text-bold">학종</span></p>
+                <p>김인규 유애자의 차녀 <span class="text-bold">나영</span></p>
+            </div>
+        </div>
+
+        <!-- <div class="div-line"></div> -->
+        
+        <div id="how-to-come">
+            <div class="part-title text-center">
+                <p>오시는 길</p>
+                <p>LOCATION</p>
+            </div>
+            
+            <!-- <img src="imgs/map.jpg" class="img-fluid" alt="지도"> -->
+            <div class="map_wrap">
+                <div id="map" style="width:100%;height:100%;position:relative;overflow:hidden;"></div> 
+
+                <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+                <div class="custom_zoomcontrol radius_border"> 
+                    <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>  
+                    <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+                </div>
+            </div>
+            <div class="text-center btn-map-group">
+                <span>
+                    <img src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/icon/kmap.webp">
+                    <a type="button" class="btn-map" href="https://place.map.kakao.com/936406406" target="_blank" rel="noopener noreferrer">카카오맵</a>
+                </span>
+                <span>
+                    <img src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/icon/nmap.webp">
+                    <a type="button" class="btn-map" href="https://naver.me/xdIkk34F" target="_blank" rel="noopener noreferrer">네이버지도</a>
+                </span>
+                <span>
+                    <img src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/icon/tmap.webp">
+                    <a type="button" class="btn-map" href="https://surl.tmap.co.kr/98f76658" target="_blank" rel="noopener noreferrer">티맵</a>
+                </span>
+            </div>
+
+            <div id="how-to-come-bus">
+                <div class="sub-sub-title">
+                    <p class="text-center">울산 전세버스 안내</p>
+                    <p class="text-center">(탑승시간)</p>
+                </div>
+                
+                <p><span class="text-bold">6:30</span> 남목주유소 (남목고등학교 옆)</p>
+                <p><span class="text-bold">6:50</span> 삼산 현대백화점</p>
+                <p>-------------</p>
+                <p><span class="text-bold">15:30</span> 결혼식장 -> 울산 출발</p>
+                <p>* 기사님 연락처 : 010 3840 7108</p>
+            </div>
+        
+
+        </div>
+
+        <div class="div-line"></div>
+        
+        <div id="bank-account" class="text-center">
+            <div class="part-title text-center">
+                <p>연락처</p>
+                <p>CONTACT</p>
+            </div>
+
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#money-hakjong" aria-expanded="false" aria-controls="money-hakjong" onclick="$('#money-nayoung').collapse('hide')">
+                신랑 손학종
+            </button>
+
+            <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#money-nayoung" aria-expanded="false" aria-controls="money-nayoung" onclick="$('#money-hakjong').collapse('hide')">
+                신부 김나영
+            </button>
+            <div class="collapse" id="money-hakjong">
+                
+                <div class="card card-body card-money">
+
+                    <a href="tel:01067710314">010 6771 0314</a>
+                    
+                    <p class="text-center">신한은행 110-356-512239 (손학종)</p>
+                    <a type="button" class="btn" onclick="copy_to_clipboard('신한은행 110-356-512239 손학종')">계좌번호 복사하기</a>
+                    <a type="button" class="btn btn-warning" href="https://qr.kakaopay.com/Ej8I74B7k" target="_blank" rel="noopener noreferrer">카카오페이로 송금하기</a>
+                </div>
+            </div>
+            <div class="collapse" id="money-nayoung">
+                <div class="card card-body card-money">
+                    <a href="tel:01020882322">010 2088 2322</a>
+                    <p class="text-center">신한은행 110-438-721190 (김나영)</p>
+                    <a type="button" class="btn" onclick="copy_to_clipboard('신한은행 110-438-721190 김나영')">계좌번호 복사하기</a>
+                    <a type="button" class="btn btn-warning" href="https://qr.kakaopay.com/Ej9AachUk" target="_blank" rel="noopener noreferrer">카카오페이로 송금하기</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-line"></div>
+        
+        <div id="photo">
+            <div class="part-title text-center">
+                <p>갤러리</p>
+                <p>GALLERY</p>
+            </div>
+            <div id="gallery" style="display:none;">
+
+                <img alt="사진 1" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/01.jpg">
+                <img alt="사진 2" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/02.jpg">
+                <img alt="사진 3" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/03.jpg">
+                <img alt="사진 4" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/04.jpg">
+                <img alt="사진 5" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/05.jpg">
+                <img alt="사진 6" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/06.jpg">
+                <img alt="사진 7" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/07.jpg">
+                <img alt="사진 8" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/08.jpg">
+                <img alt="사진 9" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/09.jpg">
+                <img alt="사진 10" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/10.jpg">
+                <img alt="사진 11" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/11.jpg">
+                <img alt="사진 12" src="https://marriage-photo.s3.ap-northeast-2.amazonaws.com/images/gallery/12.jpg">
+                
+            </div>
+        </div>
+        
+        <!-- <div class="div-line"></div> -->
+        
+        <div id="comment">
+            <div class="part-title text-center">
+                <p>방명록</p>
+                <p>COMMENT</p>
+            </div>
+
+            <div id="comment-list"></div>
+
+            <a id="btn-more-comment" type="button" class="btn" onclick="moreComment()">더보기</a>
+
+            
+            <div id="write-comment">
+                <div class="form-group">
+                    <label for="comment-author">작성자</label>
+                    <input type="text" class="form-control" id="comment-author" aria-describedby="emailHelp">
+                </div>
+                <div class="form-group">
+                    <label for="comment-body">내용</label>
+                    <textarea type="text" class="form-control" id="comment-body"></textarea> 
+                </div>
+
+                <a id="btn-write-comment" class="btn btn-primary" onclick="writeComment()">작성</a>
+
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e3516116fa45668b4820a29ef98febcb"></script>
+
+        
+
+        <!-- 카카오맵 -->
+        <script>
+            var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+            mapOption = { 
+                center: new kakao.maps.LatLng(37.34004707818542, 127.10666518319127), // 지도의 중심좌표
+                level: 4 // 지도의 확대 레벨
+            };
+
+            // 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+            var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+
+            // 지도 확대, 축소 컨트롤에서 확대 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+            function zoomIn() {
+                map.setLevel(map.getLevel() - 1);
+            }
+
+            // 지도 확대, 축소 컨트롤에서 축소 버튼을 누르면 호출되어 지도를 확대하는 함수입니다
+            function zoomOut() {
+                map.setLevel(map.getLevel() + 1);
+            }
+
+            // 마커가 표시될 위치입니다 
+            var markerPosition  = new kakao.maps.LatLng(37.34004707818542, 127.10666518319127); 
+
+            // 마커를 생성합니다
+            var marker = new kakao.maps.Marker({
+                position: markerPosition
+            });
+
+            // 마커가 지도 위에 표시되도록 설정합니다
+            marker.setMap(map);
+        </script>
+
+        <!-- 사진 갤러리 -->
+        <script>
+            jQuery(document).ready(function(){
+                jQuery("#gallery").unitegallery({
+                    // gallery_theme: "tiles"
+                });
+            });
+        </script>
+
+        <script>
+            function copy_to_clipboard(text) {
+                const t = document.createElement("textarea");
+                document.body.appendChild(t);
+                t.value = text;
+                t.select();
+                document.execCommand('copy');
+                document.body.removeChild(t);
+                alert('복사되었습니다.')
+            }
+        </script>
+
+        <!-- 댓글 -->
+        <script>
+            var commentPage = 1;
+            var isCommentInProgress = false;
+            var isCommentLast = false;
+            function leftPad(value) {
+                if (value >= 10) {
+                    return value;
+                }
+
+                return `0${value}`;
+            }
+
+            function utcToKst(utcStr) {
+
+                console.log(utcStr)
+                var d = new Date(utcStr) 
+            
+                console.log(d)
+
+                const year = d.getFullYear();
+                const month = leftPad(d.getMonth() + 1);
+                const day = leftPad(d.getDate());
+
+                return [year, month, day].join('-');
+            }
+
+            function moreComment() {
+                if (isCommentLast || isCommentInProgress) return;
+                commentInProgress = true;
+                $('#btn-more-comment').css('display', 'none')
+
+                $.ajax({
+                    url: 'https://vyrn5vg1bc.execute-api.ap-northeast-2.amazonaws.com/default/marriage-comment-get?page=' + commentPage,
+                    type: 'GET',
+                    dataType: 'json',
+                    headers: {
+                        Authorization: 'Bearer 94428b12-2658-4893-8d1c-232986595ff1'
+                    },
+                    success: function(res) { 
+                        console.log(res)
+                        if (res.length == 0) {
+                            isCommentLast = true;
+                            $('#btn-more-comment').css('display', 'none')
+                            return;
+                        }
+                        for (const r in res) {
+                            $('#comment-list').append('<div id="comment-' + res[r].number +'"><p></p><div></div><p></p>')
+                            $('#comment-' + res[r].number + ' > p:nth-child(1)').text(res[r].author)
+                            for (const line of res[r].body.split('\n')) {
+                                $('#comment-' + res[r].number + ' > div:nth-child(2)').append('<p></p>')
+                                console.log(line)
+                                $('#comment-' + res[r].number + ' > div:nth-child(2) > p:last-child').text(line) 
+                            }
+                            $('#comment-' + res[r].number + ' > p:nth-child(3)').text(utcToKst(res[r].created_at))
+                            console.log(res[r])
+                        }
+                        commentPage += 1;
+                        isCommentInProgress = false;
+                        $('#btn-more-comment').css('display', 'show')
+                    }
+                });
+            }
+            jQuery(document).ready(function(){
+                moreComment();
+            });
+
+            function writeComment() {
+                if (isCommentInProgress) return;
+                commentInProgress = true;
+                $('#btn-write-comment').css('display', 'none')
+
+                if ($('#comment-author').val().length == 0 || $('#comment-body').val().length == 0) {
+                    alert('내용을 입력해 주세요.')
+                    commentInProgress = false;
+                    $('#btn-write-comment').css('display', 'show')
+                    reutrn;
+                }
+                $.ajax({
+                    url: 'https://vyrn5vg1bc.execute-api.ap-northeast-2.amazonaws.com/default/marriage-comment-get',
+                    type: 'POST',
+                    dataType: 'json',
+                    headers: {
+                        Authorization: 'Bearer 94428b12-2658-4893-8d1c-232986595ff1'
+                    },
+                    data: JSON.stringify({
+                        "author": $('#comment-author').val(),
+                        "body": $('#comment-body').val()
+                    }),
+                    success: function(res) {
+                        alert('작성했습니다.')
+                        commentInProgress = false;
+                        $('#btn-write-comment').css('display', 'show')
+                        commentPage = 1;
+                        $('#comment-author').val('')
+                        $('#comment-body').val('')
+                        $('#comment-list').empty()
+                        moreComment();
+                    }
+                });
+            }
+        </script>
+    </div>
+  </body>
+</html>
