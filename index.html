@@ -343,12 +343,12 @@
 
             function writeComment() {
                 if (isCommentInProgress) return;
-                commentInProgress = true;
+                isCommentInProgress = true;
                 $('#btn-write-comment').css('display', 'none')
 
                 if ($('#comment-author').val().length == 0 || $('#comment-body').val().length == 0) {
                     alert('내용을 입력해 주세요.')
-                    commentInProgress = false;
+                    isCommentInProgress = false;
                     $('#btn-write-comment').css('display', 'show')
                     reutrn;
                 }
@@ -365,7 +365,8 @@
                     }),
                     success: function(res) {
                         alert('작성했습니다.')
-                        commentInProgress = false;
+                        isCommentInProgress = false;
+                        isCommentLast = false;
                         $('#btn-write-comment').css('display', 'show')
                         commentPage = 1;
                         $('#comment-author').val('')
