@@ -52,6 +52,12 @@
     margin: 5px;
 }
 
+.btn-kpay {
+    background-color: #FEE500 !important;
+    border: 1px solid #636363 !important;
+    color:	#191919 !important;
+}
+
 .btn-map-group {
     padding: 10px 0;
     background-color: #f3f3f3;
