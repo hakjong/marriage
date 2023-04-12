@@ -352,6 +352,12 @@
                     $('#btn-write-comment').css('display', 'show')
                     reutrn;
                 }
+		    
+		if (!confirm('방명록을 작성할까요?')) {
+		    isCommentInProgress = false;
+                    $('#btn-write-comment').css('display', 'show')
+                    reutrn;
+		}
                 $.ajax({
                     url: 'https://vyrn5vg1bc.execute-api.ap-northeast-2.amazonaws.com/default/marriage-comment-get',
                     type: 'POST',
